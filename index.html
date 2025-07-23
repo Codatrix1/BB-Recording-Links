@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BetterBugs Test Site | with Recording Link Configured</title>
+    <title>BetterBugs | Recording Link Customization Options</title>
 
     <script>
       window.__BetterbugsRecordingLinkConfig = {
         styles: {
-          theme: "dark",
-          primaryColor: "#1864ab",
-          primaryTextColor: "#e7f5ff",
+          theme: "light",
+          primaryColor: "#12b886",
+          primaryTextColor: "#e6fcf5",
         },
         startRecordingBtnText: "Start recording",
         mainHeaderText: "Ready to record?",
@@ -21,11 +21,12 @@
         emailFieldPlaceholder: "Enter your email",
         titleFieldPlaceholder: "Enter title for the issue",
         descriptionFieldPlaceholder: "Please describe the issue",
-        successMessageHeaderText: "You're all set ✨✨",
-        successMessageSubHeaderText:
-          "We've sucessfully collected your feedback",
+        successMessageHeaderText: "Thanks for the feedback ✨✨",
+        successMessageSubHeaderText: "We'll get back to you at the earliest.",
         metaData: {
-          testKey: "testValue",
+          userID: "1234",
+          plan: "individual",
+          otherInfo: "lorem ipsum dolor emet",
         },
       };
     </script>
@@ -36,8 +37,8 @@
   <body>
     <h1>Recording Links</h1>
     <p>
-      Configured to capture console Logs, network requests, and other technical
-      details with the screen recording
+      Configured to capture console logs, network requests, and other technical
+      details with the screen recording + Customization added for UI
     </p>
 
     <button class="btn">Click here</button>
