@@ -5,25 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BetterBugs Test Site | with Recording Link Configured</title>
 
-    <!-- Configuration must come BEFORE the scripts -->
-    <script>
-      window.__BetterbugsRecordingLinkConfig = {
-        styles: {
-          theme: "light",
-          primaryColor: "#38d9a9",
-          primaryTextColor: "#fff",
-        },
-        startRecordingBtnText: "Start recording",
-        mainHeaderText: "Ready to record?",
-        subHeaderText: "Record your screen",
-        emailFieldLabel: "Custom email label",
-        emailFieldPlaceholder: "jessie@example.com",
-        successMessageHeaderText: "Thanks for your feedback 🙏🏻",
-        successMessageSubHeaderText: "We'll get back to you at the earliest.",
-      };
-    </script>
     <script src="https://cdn.betterbugs.io/recording-link/latest/logs-capture.js"></script>
     <script src="https://cdn.betterbugs.io/recording-link/latest/recorder.js"></script>
+
+    <script>
+      const startBB = function () {
+        window.__BetterbugsRecordingLinkConfig = {
+          styles: {
+            theme: "light",
+            primaryColor: "#38d9a9",
+            primaryTextColor: "#fff",
+          },
+          startRecordingBtnText: "Start recording",
+          mainHeaderText: "Ready to record?",
+          subHeaderText: "Record your screen",
+          emailFieldLabel: "Custom email label",
+          emailFieldPlaceholder: "jessie@example.com",
+          successMessageHeaderText: "Thanks for your feedback 🙏🏻",
+          successMessageSubHeaderText: "We'll get back to you at the earliest.",
+        };
+      };
+      startBB(); // This sets the config
+    </script>
   </head>
   <body>
     <h1>Recording Links</h1>
