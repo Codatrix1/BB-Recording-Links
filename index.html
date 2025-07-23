@@ -9,23 +9,27 @@
     <script src="https://cdn.betterbugs.io/recording-link/latest/recorder.js"></script>
 
     <script>
-      const startBB = function () {
-        window.__BetterbugsRecordingLinkConfig = {
-          styles: {
-            theme: "light",
-            primaryColor: "#38d9a9",
-            primaryTextColor: "#fff",
-          },
-          startRecordingBtnText: "Start recording",
-          mainHeaderText: "Ready to record?",
-          subHeaderText: "Record your screen",
-          emailFieldLabel: "Custom email label",
-          emailFieldPlaceholder: "jessie@example.com",
-          successMessageHeaderText: "Thanks for your feedback 🙏🏻",
-          successMessageSubHeaderText: "We'll get back to you at the earliest.",
-        };
+      window.__BetterbugsRecordingLinkConfig = {
+        styles: {
+          theme: "light",
+          primaryColor: "#000000",
+          primaryTextColor: "#ffffff",
+        },
+        startRecordingBtnText: "Start recording",
+        mainHeaderText: "Ready to record?",
+        subHeaderText: "Record your screen",
+        emailFieldLabel: "Email",
+        titleFieldLabel: "Title",
+        descriptionFieldLabel: "Description",
+        emailFieldPlaceholder: "Enter your email",
+        titleFieldPlaceholder: "Enter your title",
+        descriptionFieldPlaceholder: "Enter your description",
+        successMessageHeaderText: "All set! ✨",
+        successMessageSubHeaderText: "We've saved your input",
+        metaData: {
+          testKey: "testValue",
+        },
       };
-      startBB(); // This sets the config
     </script>
   </head>
   <body>
