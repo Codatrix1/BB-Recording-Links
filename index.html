@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BetterBugs | Recording Link Customization Options</title>
+    <title>BetterBugs | Recording Link Configured with Custom UI</title>
 
+    <!-- Scripts to cature logs, network requests, and other technical details from devtools -->
+    <script src="https://cdn.jsdelivr.net/npm/@betterbugs/web-sdk@0.0.27/logs-capture.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@betterbugs/web-sdk@0.0.27/recorder.js"></script>
+
+    <!-- All Customization Options for Recording Links UI -->
     <script>
       window.__BetterbugsRecordingLinkConfig = {
         styles: {
@@ -30,9 +35,6 @@
         },
       };
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/@betterbugs/web-sdk@0.0.27/logs-capture.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@betterbugs/web-sdk@0.0.27/recorder.js"></script>
   </head>
   <body>
     <h1>Recording Links</h1>
@@ -42,6 +44,9 @@
     </p>
 
     <button class="btn">Click here</button>
+
+    <!-- Click Handler: This one triggers an error when the "Click here" button is clicked.
+     Simulates that the recording link captures console logs and other devtools info -->
     <script>
       document.querySelector(".btn").addEventListener("click", function () {
         throw new Error("Random error #" + Math.trunc(Math.random() * 10) + 1);
