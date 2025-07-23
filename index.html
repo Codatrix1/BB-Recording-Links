@@ -3,20 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Put this in the HTML head tag -->
+    <title>BetterBugs Test Site | with Recording Link Configured</title>
+
+    <!-- Configuration must come BEFORE the scripts -->
+    <script>
+      window.__BetterbugsRecordingLinkConfig = {
+        styles: {
+          theme: "light",
+          primaryColor: "#38d9a9",
+          primaryTextColor: "#fff",
+        },
+        startRecordingBtnText: "Start recording",
+        mainHeaderText: "Ready to record?",
+        subHeaderText: "Record your screen",
+        emailFieldLabel: "Custom email label",
+        emailFieldPlaceholder: "jessie@example.com",
+        successMessageHeaderText: "Thanks for your feedback 🙏🏻",
+        successMessageSubHeaderText: "We'll get back to you at the earliest.",
+      };
+    </script>
     <script src="https://cdn.betterbugs.io/recording-link/latest/logs-capture.js"></script>
     <script src="https://cdn.betterbugs.io/recording-link/latest/recorder.js"></script>
-
-    <title>BetterBugs Test Site | with Recording Link Configured</title>
   </head>
   <body>
     <h1>Recording Links</h1>
     <p>
-      Configured to capture console Logs, network requests, and and other
-      technical details with the screen recording
+      Configured to capture console Logs, network requests, and other technical
+      details with the screen recording
     </p>
 
     <button class="btn">Click here</button>
-    <script src="script.js"></script>
+    <script>
+      document.querySelector(".btn").addEventListener("click", function () {
+        throw new Error("Random error #" + Math.trunc(Math.random() * 10) + 1);
+      });
+    </script>
   </body>
 </html>
