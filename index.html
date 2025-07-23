@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Put this in the HTML head tag -->
+    <script src="https://cdn.jsdelivr.net/npm/@betterbugs/web-sdk@0.0.25/logs-capture.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@betterbugs/web-sdk@0.0.25/recorder.js"></script>
+
+    <title>BetterBugs Test Site | with Recording Link Configured</title>
+  </head>
+  <body>
+    <h1>Recording Links</h1>
+    <p>
+      Configured to capture console Logs, network requests, and and other
+      technical details with the screen recording
+    </p>
+
+    <script>
+      //----------------------------------------------
+      // Customization Options for Recording Link UI
+      //----------------------------------------------
+      window.__BetterbugsRecordingLinkConfig = {
+        styles: {
+          theme: "light",
+          primaryColor: "#38d9a9",
+          primaryTextColor: "#fff",
+        },
+        startRecordingBtnText: "Start recording",
+        mainHeaderText: "Ready to record?",
+        subHeaderText: "Record your screen",
+        emailFieldLabel: "Custom email label",
+        emailFieldPlaceholder: "jessie@example.com",
+        successMessageHeaderText: "Thanks for your feedback 🙏🏻",
+        successMessageSubHeaderText: "We'll get back to you at the earliest.",
+      };
+
+      //----------------------------------------------
+      // Test error function for log capturing demo
+      //---------------------------------------------
+      throw new Error("Random error #" + Math.trunc(Math.random() * 10) + 1);
+    </script>
+  </body>
+</html>
